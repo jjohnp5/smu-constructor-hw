@@ -65,6 +65,7 @@ function inq() {
                     console.log(colors.rainbow('GOOOD GUESSS!!'));
                 }
                 if (guessStatus[0] && guessStatus[1]) {
+                    console.log(currentWord.join(' '));
                     inquire.prompt([
                         {
                             type: 'confirm',
@@ -74,8 +75,6 @@ function inq() {
                     ]).then(res => {
                         if (res.conf) {
                             reset();
-                        } else {
-                            return;
                         }
                     })
                 } else {
